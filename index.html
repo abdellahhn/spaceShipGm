@@ -4,36 +4,64 @@
     <meta charset="UTF-8">
     <title>SpaceShipWar</title>
     <link rel="imageManager" href="imageManager.css">
+    <script src="game.js"></script>
+
     <style>
         *{
             margin: 0;
             padding: 0;
         }
 
-        html, body{
-            height: 100%;
-            margin: 0;
-        }
-
-        .images{
-            display: grid;
-            height : 100vh;
+        body {
+            overflow: hidden;
         }
 
         .background{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background-image: url("../SpaceShipWar/image/backgroundPURPLE.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
 
+        .spaceShip img{
+            position: fixed;
+            top: 37%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            justify-content: center;
+            width: 10%;
+            height: 10%;
+        }
+
+        .planet {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .planet img {
+            max-width: 25%;
+            max-height: 25%;
+            border: none;
+        }
+
     </style>
 </head>
 <body>
-    <div class="images">
-        <div class="background">
-            <div class="planet"></div>
-        </div>
-    </div>
+
+    <div class="background"></div>
+    <div class="planet"><img src="../SpaceShipWar/image/earth-modified.png" alt="earth"></div>
+    <div class="spaceShip"><img src="image/spaceship-modified.png" alt="spaceship"></div>
+
+
 </body>
 </html>
