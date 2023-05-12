@@ -29,13 +29,24 @@
         }
 
         .spaceShip img{
-            position: fixed;
-            top: 37%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            position: absolute;
             justify-content: center;
-            width: 10%;
-            height: 10%;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            z-index: 1;
+        }
+
+        .center {
+            position:absolute;
+            width: 250px;
+            height: 250px;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-timing-function:linear;
+            -webkit-animation-name:orbit;
+            -webkit-animation-duration:5s;
+            top:34.8%;
+            left:41.35%;
             z-index: 1;
         }
 
@@ -56,6 +67,11 @@
             border: none;
         }
 
+        @-webkit-keyframes orbit {
+            from { -webkit-transform:rotate(0deg) }
+            to { -webkit-transform:rotate(360deg) }
+        }
+
         .button{
             position: fixed;
             top: 5%;
@@ -74,7 +90,9 @@
 
     <div class="background"></div>
     <div class="planet"><img src="../SpaceShipWar/image/earth-modified.png" alt="earth"></div>
-    <div class="spaceShip"><img id="spaceship" src="image/spaceship-modified.png" alt="spaceShip"></div>
+    <div class="center">
+        <div class="spaceShip"><img id="spaceship" src="image/spaceship-modified.png" alt="spaceShip"></div>
+    </div>
     <br><br><br><br>
 
 

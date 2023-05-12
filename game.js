@@ -1,10 +1,10 @@
-var animer, left = 0, imgObj = null;
+var animer, left = 0, imgObj = null, top =0;
 
 function init() {
     imgObj = document.getElementById("spaceship");
     imgObj.style.position = "absolute";
-    imgObj.style.top = '240px';
-    imgObj.style.left = '-300px';
+    imgObj.style.top = '37%';
+    imgObj.style.left = '50%';
     imgObj.style.visibility = 'hidden';
 
     roundMove();
@@ -12,9 +12,11 @@ function init() {
 
 function roundMove() {
     left = parseInt(imgObj.style.left, 10);
+    top = parseInt(imgObj.style.top, 100)
 
-    if (10 >= left) {
+    if (window.innerWidth >= left) {
         imgObj.style.left = (left + 5) + 'px';
+        imgObj.style.top = (top + 5) + 'px'
         imgObj.style.visibility = 'visible';
 
         animer = setTimeout(function () {
